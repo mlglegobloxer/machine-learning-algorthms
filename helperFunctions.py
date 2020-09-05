@@ -60,3 +60,32 @@ def evaluateBinaryClassifier(predictions, outcomes):
     print(f"Precision : {precision:.4}")
     print(f"Recall    : {recall:.4}")
     print(f"F1        : {F1:.4}\n")
+
+
+def distance(p1, p2):
+    """ 
+    Finds the eucludean distance from each row in p1 from p2
+    
+    Returns a matrix where, matrix[i,j] is the distance from p1[i] to p2[j]
+    """
+    dist = []
+        
+    for i in range(np.shape(p1)[0]):
+        rowDist = []
+
+        for j in range(np.shape(p2)[0]):
+            rowDist.append(sum((p1[i] - p2[j]) ** 2) ** 0.5)
+            
+        dist.append(rowDist)
+
+    return np.array(dist)
+
+
+def mode(matrix):
+    """ Computes the row wise mode of the input matrix """
+    modes = []
+    
+    for row in range(np.shape(matrix)[0]):
+        modes.append(np.argmax(np.bincount(matrix[row, :])))
+
+    return modes
