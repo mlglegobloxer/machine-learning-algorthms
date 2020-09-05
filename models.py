@@ -3,7 +3,6 @@ import numpy as np
 from helperFunctions import *
 
 
-# Linear regression
 class LinearRegression:
     def __init__(self):
         self.trained = False
@@ -42,7 +41,6 @@ class LinearRegression:
 
 
 
-# Logistic Regression
 class LogisticRegression:
     def __init__(self):
         self.trained = False
@@ -83,7 +81,7 @@ class LogisticRegression:
             print("Please train the model first")
 
 
-# KNN Classification
+
 class KNNClassifier:
     def __init__(self):
         self.X = None
@@ -133,7 +131,6 @@ class KNNClassifier:
 
 
 
-# K-Means clustering
 class KMeansClustering:
     def __init__(self):
         self.trained = False
@@ -181,7 +178,6 @@ class KMeansClustering:
 
 
 
-# PCA
 def PCA(x, var_to_retain = 0.99):
     Sigma = (1 / np.shape(x)[0]) * np.matmul(np.transpose(x), x)
 
