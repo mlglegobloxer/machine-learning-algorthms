@@ -1,11 +1,11 @@
 import numpy as np
 from helperFunctions import *
 import matplotlib.pyplot as plt
-from linearRegression import LinearRegModel
+from models import LinearRegression
 
 
 # Test scipt
-lm = LinearRegModel()
+lm = LinearRegression()
 n = 50
 
 

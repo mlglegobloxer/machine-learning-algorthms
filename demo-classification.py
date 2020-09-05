@@ -1,11 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from helperFunctions import *
-from logisticRegression import LogisticRegModel
+from models import LogisticRegression
 
 
 print("Logistic Regression Demo,\n")
-lrClassifier = LogisticRegModel()
+lrClassifier = LogisticRegression()
 n = 100
 
 # Generate dataset
@@ -54,7 +54,8 @@ print(f"\nTrained Parameters: {lrClassifier.parameters}\n")
 wait()
 
 print("\nKNN Demo,\n")
-from KNN import KNNClassifier
+
+from models import KNNClassifier
 
 knn = KNNClassifier()
 knn.train(X, y)

@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from helperFunctions import *
-from KMeansClustering import KMeansClusteringModel
+from models import KMeansClustering
 
 # Test script
 half_n = 25
@@ -20,7 +20,7 @@ plt.title("Generated Dataset, consisting of 3 clusters\n")
 plt.show()
 
 wait()
-k_means = KMeansClusteringModel()
+k_means = KMeansClustering()
 k_means.train(X, k = 3)
 
 print(f"\nCoordinates of Cluster Centroids: \n{k_means.centroids}\n")
